@@ -10,7 +10,7 @@ class SessionsController < Devise::SessionsController
     self.resource = warden.authenticate(auth_options)
 
     if current_user
-      redirect_to notes_path, notice: "Successfully logged in"
+      redirect_to topics_path, notice: "Successfully logged in"
     else
       flash[:email]             = params.dig(:user, :email)
       flash[:errors]            = {}
