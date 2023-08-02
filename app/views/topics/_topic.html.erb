@@ -13,8 +13,8 @@
       <% else %>
         <%= link_to "Show", topic, class: 'card-footer-item button small-margin-left' %>
       <% end %>
-      <%= link_to "Edit this note", edit_topic_path(topic), class: "card-footer-item button small-margin-left is-warning" %>
-      <%= link_to "Destroy this note", topic_path(topic), data: { turbo_method: :delete, turbo_confirm: 'You want to remove this topic?' }, class: "card-footer-item button small-margin-left is-danger" %>
+      <%= link_to "Edit this topic", edit_topic_path(topic), class: "card-footer-item button small-margin-left is-warning" %>
+      <%= link_to "Destroy this topic", topic_path(topic), data: { turbo_method: :delete, turbo_confirm: 'You want to remove this topic?' }, class: "card-footer-item button small-margin-left is-danger" %>
     </footer>
   </div>
 </div>

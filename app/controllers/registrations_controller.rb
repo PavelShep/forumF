@@ -11,7 +11,7 @@ class RegistrationsController < Devise::RegistrationsController
     if user.save
       self.resource = warden.authenticate(auth_options)
       if current_user
-        redirect_to notes_path, notice: "Success register"
+        redirect_to topics_path, notice: "Success register"
       else
         redirect_to user_session_path, notice: "You need to log in to proceed"
       end
