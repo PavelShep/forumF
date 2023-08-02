@@ -1,0 +1,12 @@
+<div class="columns">
+  <div class="column is-12 flex-center">
+    <h1>Editing topic</h1>
+  </div>
+</div>
+<%= render "form", topic: @topic %>
+<div class="columns">
+  <div class="column is-12 flex-center">
+    <%= link_to "Show this topic", @topic, class: "button" %>
+    <%= link_to "Back to topics", topic_path, class: "button small-margin-left" %>
+  </div>
+</div>

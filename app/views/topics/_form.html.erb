@@ -1,0 +1,47 @@
+<%= form_with model: topic do |form| %>
+  <div class="columns">
+    <div class="column is-12">
+      <div class="columns is-marginless">
+        <div class="column is-12 flex-center">
+          <%= form.label :title %>
+        </div>
+      </div>
+      <div class="columns is-marginless">
+        <div class="column is-12">
+          <%= form.text_field :title, class: 'input' %>
+        </div>
+      </div>
+      <div class="columns is-marginless">
+        <div class="column is-12 flex-center">
+          <%= render(Components::ErrorTagComponent.new(errors: topic.errors.full_messages_for(:title))) %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="columns">
+    <div class="column is-12">
+      <div class="columns is-marginless">
+        <div class="column is-12 flex-center">
+          <%= form.label :subject %>
+        </div>
+      </div>
+      <div class="columns is-marginless">
+        <div class="column is-12">
+          <%= form.rich_text_area :subject %>
+        </div>
+      </div>
+      <div class="columns is-marginless">
+        <div class="column is-12 flex-center">
+          <%= render(Components::ErrorTagComponent.new(errors: topic.errors.full_messages_for(:subject))) %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="columns">
+    <div class="column is-12 flex-right">
+      <%= form.submit 'Save', class: 'button is-primary' %>
+    </div>
+  </div>
+<% end %>

@@ -19,6 +19,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :notes
+  has_many :topics
 
   validates :email, :nickname, presence: true
   validates :email, :nickname, uniqueness: true

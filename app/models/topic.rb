@@ -1,23 +1,20 @@
 # == Schema Information
 #
-# Table name: notes
+# Table name: topics
 #
 #  id         :integer          not null, primary key
-#  title      :string           not null
-#  status     :string           not null
-#  body       :text
-#  user_id    :integer          not null
+#  title      :string
+#  subject    :text
+#  user_id    :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
-class Note < ApplicationRecord
-  include Visible
-  include RichTextBody
-
+class Topic < ApplicationRecord
   belongs_to :user
-  belongs_to :topic
 
-  has_rich_text :body
+  has_many :notes
+
+  has_rich_text :subject
 
   validates :title, presence: true
   validates :title, length: { minimum: 5, maximum: 2000 }, allow_blank: false

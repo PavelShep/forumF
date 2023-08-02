@@ -1,0 +1,20 @@
+<div class="card" style="width: 100%">
+  <div class="card-content">
+    <header class="card-header space-between">
+      <h2 class="main-color fit-content"><%= topic.title %></h2>
+      <span class="fit-content second-color"><%= l(topic.updated_at, format: "%Y-%m-%d %H:%M:%S") %></span>
+    </header>
+    <div class="content">
+      <%= topic.subject %>
+    </div>
+    <footer class="card-footer flex-right">
+      <% if controller_name == 'topics' && action_name == 'show' %>
+        <%= link_to "Back to all topics", topics_path, class: "card-footer-item button small-margin-left" %>
+      <% else %>
+        <%= link_to "Show", topic, class: 'card-footer-item button small-margin-left' %>
+      <% end %>
+      <%= link_to "Edit this note", edit_topic_path(topic), class: "card-footer-item button small-margin-left is-warning" %>
+      <%= link_to "Destroy this note", topic_path(topic), data: { turbo_method: :delete, turbo_confirm: 'You want to remove this topic?' }, class: "card-footer-item button small-margin-left is-danger" %>
+    </footer>
+  </div>
+</div>

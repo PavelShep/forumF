@@ -1,0 +1,11 @@
+<div class="columns">
+  <div class="column is-12 flex-center">
+    <%= link_to "New topic", new_topic_path, class: 'button main-color' %>
+  </div>
+</div>
+
+<div id="notes">
+  <% @topics.each do |topic| %>
+    <%= render topic %>
+  <% end %>
+</div>
