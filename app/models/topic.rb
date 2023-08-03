@@ -12,7 +12,7 @@
 class Topic < ApplicationRecord
   belongs_to :user
 
-  has_many :notes
+  has_many :notes, dependent: :destroy
 
   has_rich_text :subject
 
