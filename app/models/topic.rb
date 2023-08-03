@@ -10,7 +10,6 @@
 #  updated_at :datetime         not null
 #
 class Topic < ApplicationRecord
- 
   belongs_to :user
 
   has_many :notes

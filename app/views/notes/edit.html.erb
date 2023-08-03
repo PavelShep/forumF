@@ -1,12 +1,29 @@
 <div class="columns">
   <div class="column is-12 flex-center">
-    <h1>Editing note</h1>
+    <h1>Edit post</h1>
   </div>
 </div>
-<%= render "form", note: @note %>
+
+<%= simple_form_for([@topic, @note]) do |f| %>
+  <div class="columns">
+    <div class="column is-12">
+      <div class="columns is-marginless">
+        <div class="column is-12">
+          <%= f.rich_text_area :body %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="columns">
+    <div class="column is-12 flex-right">
+      <%= f.button :submit, class: 'button is-primary' %>
+    </div>
+  </div>
+  
+<% end %>
 <div class="columns">
   <div class="column is-12 flex-center">
-    <%= link_to "Show this note", @note, class: "button" %>
-    <%= link_to "Back to notes", notes_path, class: "button small-margin-left" %>
+    <%= link_to "Back to topic", topic_path(@topic), class: "button" %>
   </div>
 </div>

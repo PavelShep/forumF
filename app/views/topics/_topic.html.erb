@@ -2,7 +2,7 @@
   <div class="card-content">
     <header class="card-header space-between">
       <h2 class="main-color fit-content"><%= topic.title %></h2>
-      <span class="fit-content second-color"><%= l(topic.updated_at, format: "%Y-%m-%d %H:%M:%S") %></span>
+      <span class="fit-content second-color">Created/updated by <%= topic.user.nickname %> <br> <%= l(topic.updated_at, format: "%Y-%m-%d %H:%M:%S") %></span>
     </header>
     <div class="content">
       <%= topic.subject %>

@@ -3,9 +3,6 @@ class NotesController < ApplicationController
   before_action :authenticate_user!
   before_action :set_note, only: [:edit, :update, :destroy]
 
-  def index
-  end
-
   def new
     @note = Note.new
   end
