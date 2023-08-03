@@ -11,14 +11,9 @@
 #  updated_at :datetime         not null
 #
 class Note < ApplicationRecord
-  include Visible
-  include RichTextBody
 
   belongs_to :user
   belongs_to :topic
 
   has_rich_text :body
-
-  validates :title, presence: true
-  validates :title, length: { minimum: 5, maximum: 2000 }, allow_blank: false
 end

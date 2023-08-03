@@ -1,58 +1,18 @@
-<%= form_with model: note do |form| %>
+<%= simple_form_for([@topic, @topic.notes.build]) do |f| %>
   <div class="columns">
     <div class="column is-12">
       <div class="columns is-marginless">
-        <div class="column is-12 flex-center">
-          <%= form.label :title %>
-        </div>
-      </div>
-      <div class="columns is-marginless">
         <div class="column is-12">
-          <%= form.text_field :title, class: 'input' %>
+          <%= f.rich_text_area :body %>
         </div>
-      </div>
-      <div class="columns is-marginless">
-        <div class="column is-12 flex-center">
-          <%= render(Components::ErrorTagComponent.new(errors: note.errors.full_messages_for(:title))) %>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="columns">
-    <div class="column is-12">
-      <div class="columns is-marginless">
-        <div class="column is-12 flex-center">
-          <%= form.label :body %>
-        </div>
-      </div>
-      <div class="columns is-marginless">
-        <div class="column is-12">
-          <%= form.rich_text_area :body %>
-        </div>
-      </div>
-      <div class="columns is-marginless">
-        <div class="column is-12 flex-center">
-          <%= render(Components::ErrorTagComponent.new(errors: note.errors.full_messages_for(:body))) %>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="columns">
-    <div class="column is-6">
-      <%= form.label :status %>
-    </div>
-    <div class="column is-6 flex-right is-marginless">
-      <div class="select">
-        <%= form.select :status, %w(public private archived), selected: "public" %>
       </div>
     </div>
   </div>
 
   <div class="columns">
     <div class="column is-12 flex-right">
-      <%= form.submit 'Save', class: 'button is-primary' %>
+      <%= f.button :submit, class: 'button is-primary' %>
     </div>
   </div>
+  
 <% end %>

@@ -44,7 +44,7 @@ class TopicsController < ApplicationController
   def set_topic
     @topic = Topic.find(params[:id])
   rescue ActiveRecord::RecordNotFound
-    redirect_to topics_url, alert: "Note not found."
+    redirect_to topics_url, alert: "Topic not found."
   end
 
   def topics_params

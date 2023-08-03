@@ -1,1 +1,11 @@
+<h1>Topic</h1>
 <%= render @topic %>
+
+<h2>Posts</h2>
+<%= render @topic.notes %>
+
+<div class="columns">
+  <div class="column is-12 flex-center">
+    <%= link_to "New post", new_topic_note_path(@topic), class: 'button main-color' %>
+  </div>
+</div>
