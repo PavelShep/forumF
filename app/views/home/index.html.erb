@@ -5,10 +5,18 @@
 <% else %>
   <div class="columns">
     <div class="column is-12 flex-center">
-      <h2><%= link_to "Log in", user_session_path, class: 'main-color' %>
-        or
-        <%= link_to "Sign up", new_registration_path(:user), class: 'main-color' %>
-        before start</h2>
+      <main>
+        <div class="forum-welcome">
+          <h1>Welcome to our website's forum!</h1>
+          <p>
+            It is a thriving hub for knowledge exchange and vibrant discussions.
+            Engage with a diverse community of enthusiasts, where you can explore topics of your interest and share your expertise.
+            Register to join the conversations, ask questions, and contribute valuable insights.
+            We foster a respectful and inclusive environment to ensure everyone's voice is heard.
+            Together, let's create an enriching experience on our forum
+          </p>
+        </div>
+      </main>
     </div>
   </div>
 <% end %>

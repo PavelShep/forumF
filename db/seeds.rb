@@ -18,5 +18,5 @@ categories.each do |category|
 end
 
 #Users
-# User.create!(:nickname => 'John Doe', :email => 'john@gmail.com', :password => 'password', :password_confirmation => 'password')
-# User.create!(:nickname => 'John Morgan', :email => 'morgan@gmail.com', :password => 'password1', :password_confirmation => 'password1')
+User.create!(:nickname => 'John Doe', :email => 'john@gmail.com', :password => 'password', :password_confirmation => 'password')
+User.create!(:nickname => 'John Morgan', :email => 'morgan@gmail.com', :password => 'password1', :password_confirmation => 'password1')

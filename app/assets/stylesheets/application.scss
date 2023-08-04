@@ -236,6 +236,25 @@ input.input:-webkit-autofill:focus {
   animation-fill-mode: forwards;
 }
 
+.forum-welcome {
+  text-align: center;
+  padding: 20px;
+}
+
+.forum-welcome h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.forum-welcome p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.forum-welcome a.button {
+  margin-top: 20px;
+}
+
 @keyframes swipe {
   0%, 50%, 100% {
     padding-left: 0%;
