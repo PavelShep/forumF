@@ -23,17 +23,22 @@ class CategoriesController < ApplicationController
   end
   
   def edit
+    @category = Category.find(params[:id])
   end
 
   def update
+    @category = Category.find(params[:id])
     if @category.update(category_params)
-      redirect_to @category, notice: "Topic was successfully updated."
+      redirect_to @category, notice: "Category was successfully updated."
     else
       render 'edit'
     end
   end
 
   def destroy
+    @category = Category.find(params[:id])
+    @category.destroy
+    redirect_to categories_url, notice: "Category was successfully destroyed."
   end
 
   private
