@@ -1,0 +1,16 @@
+<div class="card" style="width: 100%">
+  <div class="card-content">
+    <header class="card-header space-between">
+      <h2 class="main-color fit-content"><%= category.name %></h2>
+    </header>
+    <footer class="card-footer flex-right">
+      <% if controller_name == 'categories' && action_name == 'show' %>
+        <%= link_to "Back to all topics", category_path, class: "card-footer-item button small-margin-left" %>
+      <% else %>
+        <%= link_to "Show", category, class: 'card-footer-item button small-margin-left' %>
+      <% end %>
+      <%= link_to "Edit this category", edit_category_path(category), class: "card-footer-item button small-margin-left is-warning" %>
+      <%= link_to "Destroy this category", category_path(category), data: { turbo_method: :delete, turbo_confirm: 'You want to remove this topic?' }, class: "card-footer-item button small-margin-left is-danger" %>
+    </footer>
+  </div>
+</div>

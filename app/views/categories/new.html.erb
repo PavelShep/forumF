@@ -1,0 +1,11 @@
+<div class="columns">
+  <div class="column is-12 flex-center">
+    <h1>New category</h1>
+  </div>
+</div>
+<%= render "form", category: @category %>
+<div class="columns">
+  <div class="column is-12 flex-center">
+    <%= link_to "Back to categories", categories_path, class: "button" %>
+  </div>
+</div>

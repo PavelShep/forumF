@@ -1,4 +1,8 @@
 FactoryBot.define do
+  factory :category do
+    name { "MyString" }
+  end
+
   factory :topic do
     title { "MyString" }
     subject { "MyText" }

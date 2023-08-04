@@ -11,11 +11,12 @@ class TopicsController < ApplicationController
 
   def new
     @topic = current_user.topics.build
+    @categories = Category.all.map{|c| [c.name, c.id]}
   end
 
   def create
     @topic = current_user.topics.build(topics_params)
-
+    @topic.category_id = params[:category_id]
     if @topic.save
       redirect_to @topic, notice: "Topic was successfully created."
     else
@@ -48,6 +49,6 @@ class TopicsController < ApplicationController
   end
 
   def topics_params
-    params.require(:topic).permit(:title, :subject)
+    params.require(:topic).permit(:title, :subject, :category_id)
   end
 end
