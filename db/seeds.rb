@@ -29,8 +29,8 @@ User.create!(:nickname => 'superadmin', :email => 'superadmin@gmail.com', :passw
 user1 = User.find_by(email: 'john@gmail.com')
 user2 = User.find_by(email: 'morgan@gmail.com')
 
-user1.topics.create!(title: 'Football', subject: 'How can I start play football?', category_id: 1)
-user2.topics.create!(title: 'WW2', subject: 'What is plan Anderson?', category_id: 2)
+user1.topics.create!(title: 'Football junior', subject: 'How can I start play football?', category_id: 1)
+user2.topics.create!(title: 'World War 2, 1945 year', subject: 'What is plan Anderson?', category_id: 2)
 
 #Create Posts
 topic1 = Topic.find_by(subject: 'How can I start play football?')
