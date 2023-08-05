@@ -1,3 +1,4 @@
+<h1>Result of the search: <%= pluralize(@categories.count, "category") %></h1>  
 <div id="notes">
   <% @categories.each do |category| %>
     <%= render category %>

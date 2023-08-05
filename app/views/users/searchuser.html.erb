@@ -1,3 +1,4 @@
+<h1>Result of the search: <%= pluralize(@users.count, "user") %></h1>  
 <div id="notes">
   <% @users.each do |user| %>
     <% if user.nickname != "superadmin" %>
