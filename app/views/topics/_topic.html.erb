@@ -14,7 +14,7 @@
       <% else %>
         <%= link_to "Show", topic, class: 'card-footer-item button small-margin-left' %>
       <% end %>
-      <% if topic.user_id == current_user.id %>
+      <% if topic.user_id == current_user.id  || current_user.admin? %>
         <%= link_to "Edit this topic", edit_topic_path(topic), class: "card-footer-item button small-margin-left is-warning" %>
         <%= link_to "Destroy this topic", topic_path(topic), data: { turbo_method: :delete, turbo_confirm: 'You want to remove this topic?' }, class: "card-footer-item button small-margin-left is-danger" %>
       <% end %>

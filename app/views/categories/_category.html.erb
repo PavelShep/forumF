@@ -9,8 +9,10 @@
       <% else %>
         <%= link_to "Show", category, class: 'card-footer-item button small-margin-left' %>
       <% end %>
-      <%= link_to "Edit this category", edit_category_path(category), class: "card-footer-item button small-margin-left is-warning" %>
-      <%= link_to "Destroy this category", category_path(category), data: { turbo_method: :delete, turbo_confirm: 'You want to remove this category and all dependeces?' }, class: "card-footer-item button small-margin-left is-danger" %>
+      <% if current_user.admin? %>
+        <%= link_to "Edit this category", edit_category_path(category), class: "card-footer-item button small-margin-left is-warning" %>
+        <%= link_to "Destroy this category", category_path(category), data: { turbo_method: :delete, turbo_confirm: 'You want to remove this category and all dependeces?' }, class: "card-footer-item button small-margin-left is-danger" %>
+      <% end %>
     </footer>
   </div>
 </div>

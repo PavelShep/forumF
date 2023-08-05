@@ -17,6 +17,7 @@ categories.each do |category|
   Category.create!(category)
 end
 
-#Users
-User.create!(:nickname => 'John Doe', :email => 'john@gmail.com', :password => 'password', :password_confirmation => 'password')
-User.create!(:nickname => 'John Morgan', :email => 'morgan@gmail.com', :password => 'password1', :password_confirmation => 'password1')
+# Create Users
+User.create!(:nickname => 'John Doe', :email => 'john@gmail.com', :password => 'password', :password_confirmation => 'password', :admin => false)
+User.create!(:nickname => 'John Morgan', :email => 'morgan@gmail.com', :password => 'password1', :password_confirmation => 'password1', :admin => false)
+User.create!(:nickname => 'Alex Smith', :email => 'alexsmith@gmail.com', :password => 'password12', :password_confirmation => 'password12', :admin => true)
