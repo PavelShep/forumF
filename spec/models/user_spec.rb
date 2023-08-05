@@ -11,6 +11,7 @@
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
 #  nickname               :string           not null
+#  admin                  :boolean          default(FALSE)
 #
 require 'rails_helper'
 

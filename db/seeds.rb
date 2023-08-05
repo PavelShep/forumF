@@ -17,8 +17,17 @@ categories.each do |category|
   Category.create!(category)
 end
 
-# Create Users
+# Create simple Users
 User.create!(:nickname => 'John Doe', :email => 'john@gmail.com', :password => 'password', :password_confirmation => 'password', :admin => false)
 User.create!(:nickname => 'John Morgan', :email => 'morgan@gmail.com', :password => 'password1', :password_confirmation => 'password1', :admin => false)
+# Create admin Users
 User.create!(:nickname => 'Alex Smith', :email => 'alexsmith@gmail.com', :password => 'password12', :password_confirmation => 'password12', :admin => true)
+# Create superadmin Users
 User.create!(:nickname => 'superadmin', :email => 'superadmin@gmail.com', :password => 'password123', :password_confirmation => 'password123', :admin => true)
+
+#Create Topics
+user1 = User.find_by(email: 'john@gmail.com')
+user2 = User.find_by(email: 'morgan@gmail.com')
+
+user1.topics.create!(title: 'Football', subject: 'How can I start play football?', category_id: 1)
+user2.topics.create!(title: 'WW2', subject: 'What is plan Anderson?', category_id: 2)
