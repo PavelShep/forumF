@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   root to: "home#index"
   resources :categories
   get "searchtopic", to: "topics#searchtopic"
+  get "searchcategory", to: "categories#searchcategory"
+  get "searchuser", to: "users#searchuser"
 end

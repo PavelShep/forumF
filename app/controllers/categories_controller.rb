@@ -42,6 +42,10 @@ class CategoriesController < ApplicationController
     redirect_to categories_url, notice: "Category was successfully destroyed."
   end
 
+  def searchcategory
+    @categories = Category.where("name LIKE ?", "%" + params[:q] + "%")
+  end
+
   private
 
   def category_params
