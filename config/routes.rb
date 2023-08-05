@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :edit, :update]
   root to: "home#index"
   resources :categories
+  get "searchtopic", to: "topics#searchtopic"
 end

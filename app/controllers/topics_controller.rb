@@ -40,6 +40,10 @@ class TopicsController < ApplicationController
     redirect_to topics_url, notice: "Topic was successfully destroyed."
   end
 
+  def searchtopic
+    @topics = Topic.where("title LIKE ?", "%" + params[:q] + "%")
+  end
+
   private
 
   def set_topic

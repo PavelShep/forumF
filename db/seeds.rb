@@ -31,3 +31,10 @@ user2 = User.find_by(email: 'morgan@gmail.com')
 
 user1.topics.create!(title: 'Football', subject: 'How can I start play football?', category_id: 1)
 user2.topics.create!(title: 'WW2', subject: 'What is plan Anderson?', category_id: 2)
+
+#Create Posts
+topic1 = Topic.find_by(subject: 'How can I start play football?')
+topic2 = Topic.find_by(subject: 'What is plan Anderson?')
+
+topic1.notes.create!(body: ':)))', user_id: 1)
+topic2.notes.create!(body: 'Try to use Wikipedia)', user_id: 2)

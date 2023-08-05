@@ -1,3 +1,20 @@
+<section class="section">
+  <div class="container">
+    <form action="/searchtopic" role="search" method="get">
+      <div class="field is-grouped is-centered">
+        <div class="control is-expanded">
+          <input class="input is-2" type="text" name="q" placeholder="Search">
+        </div>
+        <div class="control">
+          <button class="button is-info" type="submit">
+            Search
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
 <div class="columns">
   <div class="column is-12 flex-center">
     <%= link_to "New topic", new_topic_path, class: 'button main-color' %>
