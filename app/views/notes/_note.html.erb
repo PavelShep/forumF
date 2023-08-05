@@ -8,10 +8,12 @@
       <div class="content">
         <%= note.body %>
       </div>
-      <footer class="card-footer flex-right">
-        <%= link_to "Edit this post", edit_topic_note_path(note.topic, note), class: "card-footer-item button small-margin-left is-warning" %>
-        <%= link_to "Destroy this post", topic_note_path(note.topic, note), data: { turbo_method: :delete, turbo_confirm: 'You want to remove this note?' }, class: "card-footer-item button small-margin-left is-danger" %>
-      </footer>
+      <% if note.user_id == current_user.id %>
+        <footer class="card-footer flex-right">
+          <%= link_to "Edit this post", edit_topic_note_path(note.topic, note), class: "card-footer-item button small-margin-left is-warning" %>
+          <%= link_to "Destroy this post", topic_note_path(note.topic, note), data: { turbo_method: :delete, turbo_confirm: 'You want to remove this note?' }, class: "card-footer-item button small-margin-left is-danger" %>
+        </footer>
+      <% end %>
     </div>
   </div>
 </div>
