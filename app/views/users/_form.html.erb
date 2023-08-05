@@ -1,0 +1,43 @@
+<%= form_with model: user do |form| %>
+  <div class="columns">
+    <div class="column is-12">
+      <div class="columns is-marginless">
+        <div class="column is-12 flex-center">
+          <%= form.label :nickname %>
+        </div>
+      </div>
+      <div class="columns is-marginless">
+        <div class="column is-12">
+          <%= form.text_field :nickname, class: 'input' %>
+        </div>
+      </div>
+      <div class="columns is-marginless">
+        <div class="column is-12 flex-center">
+          <%= render(Components::ErrorTagComponent.new(errors: user.errors.full_messages_for(:nickname))) %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="columns">
+    <div class="column is-12">
+      <div class="columns is-marginless">
+        <div class="column is-12 flex-center">
+          <h3>Admin</h3> 
+          <%= form.check_box :admin %>
+        </div>
+      </div>
+      <div class="columns is-marginless">
+        <div class="column is-12 flex-center">
+          <%= render(Components::ErrorTagComponent.new(errors: user.errors.full_messages_for(:admin))) %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="columns">
+    <div class="column is-12 flex-right">
+      <%= form.submit 'Update', class: 'button is-primary' %>
+    </div>
+  </div>
+<% end %>

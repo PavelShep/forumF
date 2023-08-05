@@ -1,0 +1,12 @@
+<div class="card" style="width: 100%">
+  <div class="card-content">
+    <header class="card-header space-between">
+      <h2 class="main-color fit-content"><%= user.nickname %></h2>
+      <span class="fit-content second-color">Admin: <%= user.admin %> </span>
+      
+    </header>
+    <footer class="card-footer flex-right">
+      <%= link_to "Edit user", edit_user_path(user), class: "card-footer-item button small-margin-left is-warning" %>
+    </footer>
+  </div>
+</div>

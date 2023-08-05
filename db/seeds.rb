@@ -21,3 +21,4 @@ end
 User.create!(:nickname => 'John Doe', :email => 'john@gmail.com', :password => 'password', :password_confirmation => 'password', :admin => false)
 User.create!(:nickname => 'John Morgan', :email => 'morgan@gmail.com', :password => 'password1', :password_confirmation => 'password1', :admin => false)
 User.create!(:nickname => 'Alex Smith', :email => 'alexsmith@gmail.com', :password => 'password12', :password_confirmation => 'password12', :admin => true)
+User.create!(:nickname => 'superadmin', :email => 'superadmin@gmail.com', :password => 'password123', :password_confirmation => 'password123', :admin => true)

@@ -1,0 +1,7 @@
+<div id="notes">
+  <% @users.each do |user| %>
+    <% if user.nickname != "superadmin" %>
+      <%= render user %>
+    <% end %>
+  <% end %>
+</div>

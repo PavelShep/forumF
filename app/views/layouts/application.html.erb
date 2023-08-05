@@ -55,6 +55,9 @@
             <% else %>
               <li><a href="<%= topics_path %>">All topics</a></li>
               <li><a href="<%= categories_path %>">All categories</a></li>
+              <% if current_user.admin? && current_user.nickname == "superadmin" %>
+                <li><a href="<%= users_path %>">All users</a></li>
+              <% end %>
               <li><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></li>
             <% end %>
           </ul>
