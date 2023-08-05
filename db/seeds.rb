@@ -33,8 +33,5 @@ user1.topics.create!(title: 'Football junior', subject: 'How can I start play fo
 user2.topics.create!(title: 'World War 2, 1945 year', subject: 'What is plan Anderson?', category_id: 2)
 
 #Create Posts
-topic1 = Topic.find_by(subject: 'How can I start play football?')
-topic2 = Topic.find_by(subject: 'What is plan Anderson?')
-
-topic1.notes.create!(body: ':)))', user_id: 1)
-topic2.notes.create!(body: 'Try to use Wikipedia)', user_id: 2)
+Note.create!(body: 'You should Google this', user_id: 1, topic_id: 1)
+Note.create!(body: 'Try to use Wikipedia)', user_id: 2, topic_id: 2)
