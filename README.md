@@ -1,47 +1,60 @@
-# README
+# Forum Website
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Forum Website is a Ruby on Rails application that serves as an online platform for engaging discussions and knowledge sharing. The website provides users with the opportunity to participate in diverse discussions on various topics, connect with like-minded individuals, and expand their knowledge base.
 
-Things you may want to cover:
+## Features
 
-* Ruby version
+- **User Authentication**: The website uses Devise, a powerful authentication solution for Rails, to securely manage user registration and login.
 
-* System dependencies
+- **Categories and Topics**: Discussions are organized into different categories, making it easy for users to find and contribute to relevant topics.
 
-* Configuration
+- **Create posts**: Users can create new topics and posts
 
-* Database creation
+- **Admin Panel**: Administrators have access to manage topics and categories.
 
-* Database initialization
+- **SuperAdmin Panel**: SuperAdmin have access to a dedicated admin panel to manage users(can add admin privileges), topics, and categories.
 
-* How to run the test suite
+## Getting Started
 
-* Services (job queues, cache servers, search engines, etc.)
+### Prerequisites
 
-* Deployment instructions
+- Ruby 3.1.2p20
 
-* ...
+- ImageMagick - for pictures (Version: ImageMagick 7.1.1-12)
 
-https://guides.rubyonrails.org/active_storage_overview.html
+- ffmpeg - for videos (ffmpeg version 6.0)
 
-ImageMagick - for pictures (Version: ImageMagick 7.1.1-12)
+### Installation
 
-ffmpeg - for videos (ffmpeg version 6.0)
+1. Clone the repository:
 
-ruby 3.1.2p20
+   ```
+   git clone https://github.com/PavelShep/forumF
+   cd forumF
+   ```
 
-bundle update
+2. Install dependencies:
 
-bundle install
+   ```
+   bundle update
+   bundle install
+   ```
 
-rails s ;)
+3. Set up the database:
 
-Usefull function pause at rspec feature specs:
+   ```
+   rails db:migrate
+   rails db:seed
+   ```
 
-  def pause
-    puts 'Press ENTER to continue (...)'
-    $stdin.gets
-  end
+4. Start the development server:
 
-Remember when using it u have to click ENTER to procced so don't use that in read only terminals.
+   ```
+   rails server
+   ```
+
+5. Open your browser and navigate to `http://localhost:3000` to access the website.
+
+### P.S.
+
+Information for logging(email, passwords) you can find in db/seeds.rb
