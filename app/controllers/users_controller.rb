@@ -14,6 +14,10 @@ class UsersController < ApplicationController
     end
   end
 
+  def searchuser
+    @users = User.where("nickname LIKE ?", "%" + params[:q] + "%")
+  end
+
   private
 
   def find_user
