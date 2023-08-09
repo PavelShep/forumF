@@ -1,6 +1,8 @@
-# Forum Website
+# Forum
 
-Forum Website is a Ruby on Rails application that serves as an online platform for engaging discussions and knowledge sharing. The website provides users with the opportunity to participate in diverse discussions on various topics, connect with like-minded individuals, and expand their knowledge base.
+![forum](https://raw.githubusercontent.com/PavelShep/PavelShep/main/uploads/forum.png)
+
+Forum is a Ruby on Rails application that serves as an online platform for engaging discussions and knowledge sharing. The website provides users with the opportunity to participate in diverse discussions on various topics, connect with like-minded individuals, and expand their knowledge base.
 
 ## Features
 
@@ -10,9 +12,9 @@ Forum Website is a Ruby on Rails application that serves as an online platform f
 
 - **Create posts**: Users can create new topics and posts
 
-- **Admin Panel**: Administrators have access to manage topics and categories.
+- **Admin**: Administrators have access to manage topics and categories.
 
-- **SuperAdmin Panel**: SuperAdmin have access to a dedicated admin panel to manage users(can add admin privileges), topics, and categories.
+- **SuperAdmin**: SuperAdmin have access to a dedicated admin panel to manage users(can add admin privileges), topics, and categories.
 
 ## Getting Started
 
@@ -36,7 +38,6 @@ Forum Website is a Ruby on Rails application that serves as an online platform f
 2. Install dependencies:
 
    ```
-   bundle update
    bundle install
    ```
 
@@ -58,3 +59,4 @@ Forum Website is a Ruby on Rails application that serves as an online platform f
 ### P.S.
 
 Information for logging(email, passwords) you can find in db/seeds.rb
+You may have troubles with pictures and videos
