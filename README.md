@@ -26,6 +26,8 @@ Forum is a Ruby on Rails application that serves as an online platform for engag
 
 - ffmpeg - for videos (ffmpeg version 6.0)
 
+- Bulma 
+
 ### Installation
 
 1. Clone the repository:
